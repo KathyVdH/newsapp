@@ -1,0 +1,25 @@
+<% include header %>
+
+<div class='header'>
+  <h1> Design Trends in 2017! </h1>
+  <h2> <span>Here you can find everything you need to know about the upcoming design trends in 2017! </span></h2>
+</div>
+
+
+<% var teller = 1; %>
+<% nieuws.forEach(function(item){ %>
+  <section>
+      <h2>
+        <a href=/items/<%- item.id %>><%- item.titel %></a>
+      </h2>
+      <img src="/img/<%- item.afbeeldings %>" alt=<%- item.titel %>">
+      <p><%- item.datum %></p>
+
+      <p>
+        <%- item.samenvatting %>
+      </p>
+  </section>
+  <% teller++;}); %>
+
+
+<% include footer %>
